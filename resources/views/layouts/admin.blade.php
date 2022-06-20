@@ -35,7 +35,7 @@
         }
 
         .left-side-menu {
-            background-color: #006400;
+            background-color: #0a0e79;
         }
 
         #side-menu ul,
@@ -136,19 +136,19 @@
                 <div class="logo-box">
                     <a href="{{ url('/admin/dashboard') }}" class="logo logo-dark text-center">
                         <span class="logo-sm mt-2">
-                          <h1 style="color:#006400">SDP</h2>
+                            <img src="/assets/images/logo_3.png" alt="" height="80" style="margin-top:-20px">
                         </span>
                         <span class="logo-lg mt-2">
-                          <h1 style="color:#006400">SDP</h2>
+                            <img src="/assets/images/logo_3.png" alt="" height="80" style="margin-top:-20px">
                         </span>
                     </a>
 
                     <a href="{{ url('/admin/dashboard') }}" class="logo logo-light text-center">
                         <span class="logo-sm">
-                           <h2>SDP</h2>
+                            <img src="/assets/images/logo_3.png" alt="" height="100" style="margin-top:-20px">
                         </span>
                         <span class="logo-lg">
-                           <h2>SDP</h2>
+                            <img src="/assets/images/logo_3.png" alt="" height="100" style="margin-top:-20px">
                         </span>
                     </a>
                     <div class="clearfix"></div>

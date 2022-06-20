@@ -16,3 +16,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/admin/login', [App\Http\Controllers\Auth\LoginController::class, 'showlogin'])->name('login');
 Route::post('/login', [App\Http\Controllers\Auth\LoginController::class, 'login']);
 Route::post('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
+
+Route::middleware('auth')->group(function () {
+
+   
+
+    Route::group(['prefix' => 'admin'], function () {
+        Route::get('dashboard', [App\Http\Controllers\Admin\AdminController::class, 'dashboard'])->name('admin-dashboard');
+       
+    });
+
+   
+});
