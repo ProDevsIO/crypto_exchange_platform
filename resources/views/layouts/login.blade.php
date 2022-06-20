@@ -39,14 +39,14 @@
                     <!-- Logo -->
                     <div class="auth-brand text-center text-lg-start">
                         <div class="auth-logo">
-                            <a href="{{ url('/login') }}" class="logo logo-dark text-center">
+                            <a href="{{ url('/admin/login') }}" class="logo logo-dark text-center">
                                 <span class="logo-lg">
                                     <img src="/assets/images/logo_3.png" alt="" height="200">
                                 </span>
                             </a>
                            
 
-                            <a href="{{ url('/login') }}" class="logo logo-light text-center">
+                            <a href="{{ url('/admin/login') }}" class="logo logo-light text-center">
                                 <span class="logo-lg">
                                 <img src="/assets/images/logo_2.png" alt="" height="200">
                                 </span>

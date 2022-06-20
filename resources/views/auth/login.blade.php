@@ -1,6 +1,11 @@
 @extends('layouts.login')
 @section('style')
 <link href="/assets/css/authentication.css" rel="stylesheet" type="text/css" />
+<style>
+    .form-control{
+        border: 1px solid #0a0e79 !important;
+    }
+</style>
 @endsection
 
 @section('content')
