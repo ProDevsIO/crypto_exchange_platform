@@ -19,11 +19,21 @@ Route::post('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logou
 
 Route::middleware('auth')->group(function () {
 
-   
-
     Route::group(['prefix' => 'admin'], function () {
         Route::get('dashboard', [App\Http\Controllers\Admin\AdminController::class, 'dashboard'])->name('admin-dashboard');
        
+        Route::group(['prefix' => 'blockchain'], function () {
+            Route::get('/', [App\Http\Controllers\Admin\BlockchainController::class, 'index']);
+            Route::get('/add', [App\Http\Controllers\Admin\BlockchainController::class, 'addAccount']);
+            Route::get('/edit', [App\Http\Controllers\Admin\BlockchainController::class, 'editAccount']);
+        });
+
+        Route::group(['prefix' => 'kucoin'], function () {
+            Route::get('/', [App\Http\Controllers\Admin\KucoinController::class, 'index']);
+            Route::get('/add', [App\Http\Controllers\Admin\KucoinController::class, 'addAccount']);
+            Route::get('/edit', [App\Http\Controllers\Admin\KucoinController::class, 'editAccount']);
+        });
+
     });
 
    

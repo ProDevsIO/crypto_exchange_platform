@@ -222,45 +222,26 @@
                             </li>
 
                             <li>
-                                <a href="{{ url('/admin/forms') }}">
-                                    <i data-feather="clipboard"></i>
-                                    <span> Forms </span>
+                                <a href="{{ url('/admin/blockchain/') }}">
+                                    <i data-feather="grid"></i>
+                                    <span> Blockchain </span>
                                 </a>
                             </li>
                            
                            
                             <li>
-                                <a href="{{ url('/admin/categories') }}">
+                                <a href="{{ url('/admin/kucoin') }}">
                                 <i data-feather="grid"></i>
-                                    <span> Categories </span>
+                                    <span> Kucoin </span>
                                 </a>
                             </li>
                            
                             <li>
                                 <a href="{{ url('/admin/positions') }}">
-                                    <i data-feather="user-check"></i>
-                                    <span> Subcategories </span>
+                                    <i data-feather="list"></i>
+                                    <span> Logs </span>
                                 </a>
                             </li>
-
-                            <li>
-                                <a href="#settings" data-bs-toggle="collapse">
-                                    <i data-feather="book-open"></i>
-                                    <span> Applications </span>
-                                    <span class="menu-arrow"></span>
-                                </a>
-                                <div class="collapse" id="settings">
-                                    <ul class="nav-second-level">
-                                        <li>
-                                            <a href="{{ url('/admin/application/paid') }}">Paid </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{ url('/admin/application/unpaid') }}">Unpaid</a>
-                                        </li> 
-                                    </ul>
-                                </div>
-                            </li> 
-
 
                         </ul>
 
