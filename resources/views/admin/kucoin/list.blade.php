@@ -9,11 +9,14 @@
 <link href="/assets/libs/selectize/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css" />
 <!-- third party css end -->
 <style>
-    .bg-orange{
-        background-color:#d5450b;
+    .bg-primary{
+        background-color:#0a0e79 !important;
     }
     #myChart{
         max-height: 300px;
+    }
+    p{
+        font-size:14px;
     }
 </style>
 
@@ -44,7 +47,7 @@
                                     <div class="card-body">
                                         <div class="row">
                                             <div class="col-4 my-1">
-                                                <div class="avatar-lg bg-primary rounded p-3">
+                                                <div class="avatar-lg bg-primary rounded p-3" >
                                                     <i class="fe-users avatar-title font-22 text-white"></i>
                                                 </div>
                                             </div>
@@ -54,7 +57,7 @@
                                                     <p class="text-muted mb-1 text-truncate">{{$account->api_token}}</p>
                                                     <p class="text-muted mb-1 text-truncate">{{$account->secret}}</p>
                                                     <p class="text-muted mb-1 text-truncate">{{$account->passphrase}}</p>
-                                                    <p class="text-muted mb-1 text-truncate"><span class="bg-primary p-2 text-white">verified</span></p>
+                                                    <p class="text-muted mb-1 text-truncate"><span class="badge bg-soft-info text-info p-1">verified</span></p>
                                                 </div>
                                             </div>
                                         </div>
