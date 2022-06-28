@@ -32,6 +32,7 @@ Route::middleware('auth')->group(function () {
             Route::get('/', [App\Http\Controllers\Admin\KucoinController::class, 'index']);
             Route::post('/add', [App\Http\Controllers\Admin\KucoinController::class, 'addAccount']);
             Route::post('/edit', [App\Http\Controllers\Admin\KucoinController::class, 'editAccount']);
+            Route::get('/test', [App\Http\Controllers\Admin\KucoinController::class, 'test']);
         });
 
     });
