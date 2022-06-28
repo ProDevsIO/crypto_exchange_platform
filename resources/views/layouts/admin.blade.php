@@ -44,6 +44,19 @@
             color: white !important;
 
         }
+        #side-menu ul,
+        #side-menu li,
+        #side-menu a:hover {
+            color: #0a0e79 !important;
+
+        }
+
+        #side-menu ul,
+        #side-menu li:hover{
+            background-color: white;
+            color: #0a0e79 !important;
+
+        }
 
         .modal-backdrop {
 
@@ -68,8 +81,8 @@
         }
 
         .avatar-lg {
-            height: 2.5rem !important;
-            width: 2.5rem !important;
+            height: 4rem !important;
+            width: 4rem !important;
         }
     </style>
 
@@ -212,7 +225,7 @@
 
                         <ul id="side-menu">
 
-                            <li class="menu-title">Navigation</li>
+                            <li class="menu-title" style="color:white !important">Navigation</li>
                            
                             <li>
                                 <a href="{{ url('/admin/dashboard') }}">
@@ -222,45 +235,26 @@
                             </li>
 
                             <li>
-                                <a href="{{ url('/admin/forms') }}">
-                                    <i data-feather="clipboard"></i>
-                                    <span> Forms </span>
+                                <a href="{{ url('/admin/blockchain/') }}">
+                                    <i data-feather="grid"></i>
+                                    <span> Blockchain </span>
                                 </a>
                             </li>
                            
                            
                             <li>
-                                <a href="{{ url('/admin/categories') }}">
+                                <a href="{{ url('/admin/kucoin') }}">
                                 <i data-feather="grid"></i>
-                                    <span> Categories </span>
+                                    <span> Kucoin </span>
                                 </a>
                             </li>
                            
                             <li>
                                 <a href="{{ url('/admin/positions') }}">
-                                    <i data-feather="user-check"></i>
-                                    <span> Subcategories </span>
+                                    <i data-feather="list"></i>
+                                    <span> Logs </span>
                                 </a>
                             </li>
-
-                            <li>
-                                <a href="#settings" data-bs-toggle="collapse">
-                                    <i data-feather="book-open"></i>
-                                    <span> Applications </span>
-                                    <span class="menu-arrow"></span>
-                                </a>
-                                <div class="collapse" id="settings">
-                                    <ul class="nav-second-level">
-                                        <li>
-                                            <a href="{{ url('/admin/application/paid') }}">Paid </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{ url('/admin/application/unpaid') }}">Unpaid</a>
-                                        </li> 
-                                    </ul>
-                                </div>
-                            </li> 
-
 
                         </ul>
 
