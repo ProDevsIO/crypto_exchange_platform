@@ -32,6 +32,34 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="row">
+                        @include("errors.showerrors")
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 col-xl-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-6 my-1">
+                                                <div class="avatar-sm bg-primary rounded p-3">
+                                                    <i class="fe-users avatar-title font-22 text-white"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="text-end">
+                                                    <h3 class="text-dark my-1"><span data-plugin="counterup"></span></h3>
+                                                    <p class="text-muted mb-1 text-truncate">Clients</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> <!-- end card-->
+                            </div> <!-- end col -->  
+                            
+                                              
+                        </div>
                        
                         <div id="addAccount" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="standard-modalLabel" aria-hidden="true">
                                             <div class="modal-dialog">
@@ -41,25 +69,40 @@
                                                     <div class="modal-header">
                                                         <h4 class="modal-title" id="standard-modalLabel">Add Account </h4>
                                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        
                                                     </div>
+                                                    <hr>
                                                     <div class="modal-body">
+                                                        
                                                         <div class=" row">
                                                            <div class="col-lg-12">
                                                                 <div class="mb-3">
                                                                   <label for="first_name" class="form-label">Account Name*</label>
-                                                                   <input type="text" name="account_name" class="form-control" id="" required>
+                                                                   <input type="text" name="account_name" class="form-control" id="" value="{{old('account_name')}}" required>
                                                                 </div>
                                                             </div>
                                                             <div class="col-lg-12">
                                                                 <div class="mb-3">
                                                                 <label for="first_name" class="form-label">Api Token*</label>
-                                                                   <input type="text" name="api_token" class="form-control" id="" required>
-                                                                   
+                                                               
+                                                                   <input type="text" name="api_token" placeholder="Please fill in your api key" class="form-control" id="" value="{{old('api_token')}}" required>
                                                                 </div>
                                                             </div>
-                                                            
+                                                            <div class="col-lg-12">
+                                                                <div class="mb-3">
+                                                                <label for="first_name" class="form-label">Api Secret*</label>
+                                                                   <input type="text" name="secret" placeholder="Please fill in your secret key" class="form-control" id="" value="{{old('secret')}}"required>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-12">
+                                                                <div class="mb-3">
+                                                                <label for="first_name" class="form-label">Passphrase*</label>
+                                                                   <input type="text" name="passphrase" placeholder="Please fill in your passphrase" class="form-control" id="" value="{{old('passphrase')}}" required>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
+                                                    <hr>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
                                                         <button type="submit" class="btn btn-success">Save</button>
