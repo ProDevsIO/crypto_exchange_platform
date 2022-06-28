@@ -23,8 +23,9 @@ class KucoinController extends Controller
 
     public function index()
     {
-       
-        return view('admin.kucoin.list');
+        $kucoinService = new kucoinService;
+        $accounts =  $kucoinService->getAccounts();
+        return view('admin.kucoin.list')->with(compact('accounts'));
     }
 
     public function addAccount(Request $request)

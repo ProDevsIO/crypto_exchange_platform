@@ -22,6 +22,10 @@ class KucoinService {
         return Kucoin::create($data);
     }
 
+    public function getAccounts()
+    {
+        return Kucoin::where('user_id', auth()->user()->id)->paginate(5);
+    }
 
     public function verifyUser($key, $secret, $passphrase)
     {

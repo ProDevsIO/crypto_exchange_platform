@@ -44,6 +44,19 @@
             color: white !important;
 
         }
+        #side-menu ul,
+        #side-menu li,
+        #side-menu a:hover {
+            color: #0a0e79 !important;
+
+        }
+
+        #side-menu ul,
+        #side-menu li:hover{
+            background-color: white;
+            color: #0a0e79 !important;
+
+        }
 
         .modal-backdrop {
 
@@ -68,8 +81,8 @@
         }
 
         .avatar-lg {
-            height: 2.5rem !important;
-            width: 2.5rem !important;
+            height: 4rem !important;
+            width: 4rem !important;
         }
     </style>
 
@@ -212,7 +225,7 @@
 
                         <ul id="side-menu">
 
-                            <li class="menu-title">Navigation</li>
+                            <li class="menu-title" style="color:white !important">Navigation</li>
                            
                             <li>
                                 <a href="{{ url('/admin/dashboard') }}">

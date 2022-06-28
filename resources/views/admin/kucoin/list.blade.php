@@ -24,7 +24,7 @@
                             <div class="col-12">
                                 <div class="page-title-box">
 
-                                    <h4 class="page-title">Kucoin Accounts    <a type="button" data-bs-toggle="modal" data-bs-target="#addAccount"  class="btn btn-primary float-end mt-2 mb-2"><i
+                                    <h4 class="page-title">Kucoin Accounts    <a type="button" data-bs-toggle="modal" data-bs-target="#addAccount" class="btn btn-primary float-end mt-2 mb-2"><i
                                         class="mdi mdi-plus-circle me-2"></i> Add Account</a></h4>
 
                                  
@@ -34,32 +34,37 @@
                         </div>
 
                         <div class="row">
-                        @include("errors.showerrors")
-
+                            @include("errors.showerrors")
                         </div>
+                        @if(count($accounts) > 0)
                         <div class="row">
-                            <div class="col-md-12 col-xl-12">
+                            @foreach($accounts as $account)
+                            <div class="col-md-6 col-xl-6">
                                 <div class="card">
                                     <div class="card-body">
                                         <div class="row">
-                                            <div class="col-6 my-1">
-                                                <div class="avatar-sm bg-primary rounded p-3">
+                                            <div class="col-4 my-1">
+                                                <div class="avatar-lg bg-primary rounded p-3">
                                                     <i class="fe-users avatar-title font-22 text-white"></i>
                                                 </div>
                                             </div>
-                                            <div class="col-6">
+                                            <div class="col-8">
                                                 <div class="text-end">
-                                                    <h3 class="text-dark my-1"><span data-plugin="counterup"></span></h3>
-                                                    <p class="text-muted mb-1 text-truncate">Clients</p>
+                                                <h5 class="text-dark my-1">{{$account->account_name}}</h5>
+                                                    <p class="text-muted mb-1 text-truncate">{{$account->api_token}}</p>
+                                                    <p class="text-muted mb-1 text-truncate">{{$account->secret}}</p>
+                                                    <p class="text-muted mb-1 text-truncate">{{$account->passphrase}}</p>
+                                                    <p class="text-muted mb-1 text-truncate"><span class="bg-primary p-2 text-white">verified</span></p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div> <!-- end card-->
                             </div> <!-- end col -->  
-                            
-                                              
+                            @endforeach  
+                            {{$accounts->links()}}                    
                         </div>
+                        @endif
                        
                         <div id="addAccount" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="standard-modalLabel" aria-hidden="true">
                                             <div class="modal-dialog">
